@@ -20,11 +20,11 @@ export default handleActions({
   },
 
   [readPostsSucceeded]: (state, { payload }) => {
-    const postList = payload.postList;
+    const posts = payload.posts;
     const byId = {};
     const allIds = [];
 
-    postList.forEach((post) => {
+    posts.forEach((post) => {
       byId[post.id] = post;
       allIds.push(post.id);
     });

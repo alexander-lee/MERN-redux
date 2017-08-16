@@ -24,6 +24,6 @@ export const readPostById = (postId) => {
 
 export const readPosts = () => {
   return async (dispatch) => {
-    dispatch(readPostsSucceeded({ postList: posts }));
+    dispatch(readPostsSucceeded({ posts }));
   };
 };
