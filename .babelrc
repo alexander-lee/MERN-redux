@@ -12,7 +12,6 @@
   "plugins": [
     "add-module-exports",
     "transform-runtime",
-    "syntax-async-functions",
-    "inline-import-graphql-ast"
+    "syntax-async-functions"
   ]
 }
