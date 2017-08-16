@@ -1,10 +1,11 @@
 {
-  "name": "MERN-graphql-apollo",
+  "name": "MERN-redux",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "gulp",
-    "test": "cross-env NODE_PATH=./client mocha --require babel-register --reporter nyan \"./!(node_modules)/**/{*-test,*.spec}.js\""
+    "test": "cross-env NODE_PATH=./client mocha --require babel-register --require ignore-styles --source-maps --reporter nyan \"./!(node_modules)/**/{*-test,*.spec}.js\"",
+    "test-watch": "npm test -- --watch"
   },
   "dependencies": {
     "babel-core": "^6.10.4",
@@ -70,6 +71,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.6.0",
+    "ignore-styles": "^5.0.1",
     "mocha": "^3.4.2",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",

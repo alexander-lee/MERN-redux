@@ -7,7 +7,7 @@ import { readPosts } from '../../actions';
 
 export class PostList extends Component {
   static propTypes = {
-    post: PropTypes.shape({
+    posts: PropTypes.shape({
       byId: PropTypes.objectOf(PropTypes.shape({
         id: PropTypes.string,
         title: PropTypes.string,
@@ -30,13 +30,13 @@ export class PostList extends Component {
   // }
 
   render() {
-    const { post } = this.props;
-    const posts = post.allIds.map((id) => post.byId[id]);
+    const { posts } = this.props;
+    const postList = posts.allIds.map((id) => posts.byId[id]);
 
     return (
       <div>
         <h1>Posts</h1>
-        {posts.map((p) => (
+        {postList.map((p) => (
           <Post
             key={p.id}
             id={p.id}
@@ -54,7 +54,7 @@ export class PostList extends Component {
 
 function mapStateToProps(state) {
   return {
-    post: state.post,
+    posts: state.post,
   };
 }
 

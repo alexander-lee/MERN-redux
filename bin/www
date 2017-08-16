@@ -5,8 +5,10 @@
  */
 
 var app = require('../dist/app');
-var debug = require('debug')('graphql-practice:server');
+var debug = require('debug')('server');
 var http = require('http');
+
+debug.log = console.log.bind(console);
 
 /**
  * Get port from environment and store in Express.
@@ -86,5 +88,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
