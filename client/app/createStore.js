@@ -11,7 +11,7 @@ const store = createStore(
     compose(...middleware) is where we inject our middlewares (think middleman for your Redux data)
     into our dataflow.
 
-    The first think we're passing is the 'Thunk Middleware', which allows us to dispatch asynchronous actions.
+    The first thing we're passing is the 'Thunk Middleware', which allows us to dispatch asynchronous actions.
     This helps us the most when we're gathering data from an API. For more details into what a thunk is, check out
     the following: https://github.com/gaearon/redux-thunk
 
