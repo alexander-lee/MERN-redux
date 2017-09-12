@@ -28,5 +28,14 @@ function Post({ id, title, user, votes, upvotePost, downvotePost }) {
   );
 }
 
+/*
+  Since we're making a functional stateless component, we can't actually write:
+  static propTypes = {
+    ...
+  };
+
+  We have to manually set it outside the function.
+*/
+
 Post.propTypes = propTypes;
 export default Post;
