@@ -24,6 +24,7 @@
     "brace-style": ["error", "stroustrup"],
     "comma-dangle": ["error", "always-multiline"],
     "func-names": ["error", "as-needed"],
+    "max-len": "off",
     "no-param-reassign": ["error", { "props": false }],
     "no-plusplus": "off",
     "no-restricted-syntax": "off",

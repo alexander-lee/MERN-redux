@@ -47,7 +47,7 @@ describe('<PostList />', () => {
           votes: postFromData.votes,
         });
 
-        expect(post.key()).to.equal(postFromData.id);
+        expect(post.key()).to.equal(`post-${postFromData.id}`);
       });
     });
   });

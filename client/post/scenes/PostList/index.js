@@ -46,7 +46,7 @@ export class PostList extends Component {
         <h1>Posts</h1>
         { postList.map((p) => (
           <Post
-            key={p.id}
+            key={`post-${p.id}`}
             id={p.id}
             title={p.title}
             user={p.user && p.user.username}

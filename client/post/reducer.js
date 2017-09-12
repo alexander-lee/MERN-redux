@@ -1,4 +1,5 @@
 import { handleActions } from 'redux-actions';
+import _ from 'lodash';
 import { readPostByIdSucceeded, readPostsSucceeded } from './actions';
 
 const defaultState = {
@@ -6,6 +7,22 @@ const defaultState = {
   allIds: [],
 };
 
+/*
+  We use redux-actions to handle our actions.
+  Normally this would look like:
+
+  function (state = defaultState, action) {
+    switch (action.type) {
+      case readPostsByIdSucceeded:
+        return {...};
+      case readPostsSucceeded:
+        return {...};
+      default:
+        return state;
+    }
+  }
+}
+*/
 export default handleActions({
   [readPostByIdSucceeded]: (state, { payload }) => {
     const post = payload.post;
@@ -15,7 +32,7 @@ export default handleActions({
         ...state.byId,
         [post.id]: post,
       },
-      allIds: [...state.allIds, post.id],
+      allIds: _.union(state.allIds, [post.id]),
     };
   },
 
