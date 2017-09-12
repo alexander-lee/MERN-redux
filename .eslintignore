@@ -1,4 +1,4 @@
 bin
 .eslintrc.js
 gulpfile.babel.js
-webpack.config.js
+webpack.config.babel.js

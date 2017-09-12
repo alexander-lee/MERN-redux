@@ -25,9 +25,9 @@ export class PostList extends Component {
     this.props.readPosts();
   }
 
-  // votePost = (id, isUpvote) => {
-  //
-  // }
+  votePost = (id, isUpvote) => {
+
+  }
 
   render() {
     const { posts } = this.props;

@@ -7,7 +7,12 @@ const productionPlugins = [
   new webpack.optimize.UglifyJsPlugin()
 ];
 
-module.exports = {
+export default {
+  devServer: {
+    compress: true,
+    port: 3000,
+    historyApiFallback: true
+  },
   entry: [
     path.join(__dirname, 'client', 'app', 'index.js')
   ],
@@ -87,6 +92,7 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       debug: debug
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
