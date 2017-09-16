@@ -7,6 +7,7 @@ const defaultState = {
   allIds: [],
 };
 
+console.log(readPostsSucceeded);
 /*
   We use redux-actions to handle our actions.
   Normally this would look like:

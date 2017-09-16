@@ -49,8 +49,8 @@ export class PostList extends Component {
             key={`post-${p.id}`}
             id={p.id}
             title={p.title}
-            user={p.owner && p.owner_name}
-            votes={p.vote_count}
+            user={p.user && p.user.username}
+            votes={p.votes}
             upvotePost={() => this.votePost(p.id, true)}
             downvotePost={() => this.votePost(p.id, false)}
           />
